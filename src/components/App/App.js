@@ -1,16 +1,17 @@
-import React from 'react'
 import './App.css';
-import '../Form/Form';
+import React, { useState } from 'react'
+import Form from '../Form/Form';
+import Header from '../Header/Header'
+import data from '../temporaryData/data'
+import IdentityCard from '../IdentityCard/IdentityCard'
+
 
 function App() {
   return (
     <div>
-    <header className='navBar'>
-      <img src={require ("../images/suspect.png")}></img>
-      <h1>New Identity Generator</h1>
-      <h2>Free of charge - no questions asked!</h2>
-    </header>
-    <Form />
+      <Header />
+      <Form />
+      <IdentityCard />
     </div>
   );
 }

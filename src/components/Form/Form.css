@@ -1,0 +1,14 @@
+.identity-form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+button {
+  margin: 20px;
+  padding: 10px;
+  background-color:white;
+  border-color: black;
+  font-size: 15px;
+  cursor: pointer;
+}
