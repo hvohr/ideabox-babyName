@@ -1,16 +1,27 @@
-import React from 'react'
 import './App.css';
-import '../Form/Form';
+import React, { useState, useEffect } from 'react'
+import Header from '../Header/Header'
+import IdentityCard from '../IdentityCard/IdentityCard'
+
 
 function App() {
-  return (
-    <div>
-    <header className='navBar'>
-      <img src={require ("../images/suspect.png")}></img>
-      <h1>New Identity Generator</h1>
-      <h2>Free of charge - no questions asked!</h2>
-    </header>
-    <Form />
+const [identity, setIdentity] = useState([])
+function getIdentity() {
+  fetch(`https://randomuser.me/api/`)
+  .then(response => response.json())
+  .then(data => setIdentity(data.results))
+}
+useEffect(() => {
+  getIdentity()
+}, [])
+let userData = identity.map(user => <IdentityCard firstName={user.name.first} lastName={user.name.last} gender={user.gender} phone={user.phone} email={user.email} birthday={user.dob.date}/> )
+ return (
+    <div className='App'>
+      <Header />
+      <main classname="main-container">
+        <button onClick={getIdentity}>Get New Identity</button>
+        {userData}
+      </main>
     </div>
   );
 }
