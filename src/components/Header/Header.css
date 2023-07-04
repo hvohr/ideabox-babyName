@@ -1,7 +1,4 @@
 .navBar {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
   background-image: url('../images/question-mark-background.jpeg');
   background-size: auto;
   background-repeat: no-repeat;
@@ -18,5 +15,6 @@ img {
 h1 {
   font-size: 40px;
   color: white;
-  margin: 10px;
+  margin-top: 0px;
+  padding: 20px;
 }

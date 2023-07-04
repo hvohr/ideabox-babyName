@@ -16,10 +16,12 @@ useEffect(() => {
 }, [])
 let userData = identity.map(user => <IdentityCard firstName={user.name.first} lastName={user.name.last} gender={user.gender} phone={user.phone} email={user.email} birthday={user.dob.date}/> )
  return (
-    <div>
+    <div className='App'>
       <Header />
-      <button onClick={getIdentity}>Get New Identity</button>
-      {userData}
+      <main classname="main-container">
+        <button onClick={getIdentity}>Get New Identity</button>
+        {userData}
+      </main>
     </div>
   );
 }
