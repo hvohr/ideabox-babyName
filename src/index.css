@@ -1,3 +1,7 @@
+* {
+  font-family: 'Roboto Mono', monospace;
+}
+
 body {
   background-color:rgb(208, 231, 253);
   margin: 0;
