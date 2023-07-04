@@ -1,17 +1,25 @@
 import './App.css';
-import React, { useState } from 'react'
-import Form from '../Form/Form';
+import React, { useState, useEffect } from 'react'
 import Header from '../Header/Header'
-import data from '../temporaryData/data'
 import IdentityCard from '../IdentityCard/IdentityCard'
 
 
 function App() {
-  return (
+const [identity, setIdentity] = useState([])
+function getIdentity() {
+  fetch(`https://randomuser.me/api/`)
+  .then(response => response.json())
+  .then(data => setIdentity(data.results))
+}
+useEffect(() => {
+  getIdentity()
+}, [])
+let userData = identity.map(user => <IdentityCard firstName={user.name.first} lastName={user.name.last} gender={user.gender} phone={user.phone} email={user.email} birthday={user.dob.date}/> )
+ return (
     <div>
       <Header />
-      <Form />
-      <IdentityCard />
+      <button onClick={getIdentity}>Get New Identity</button>
+      {userData}
     </div>
   );
 }
