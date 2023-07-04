@@ -2,7 +2,7 @@
   text-align: center;
 }
 
-button {
+.generate-button {
   width: 200px;
   font-size: 20px;
   background-color:white;
@@ -19,6 +19,13 @@ main {
   align-content: center;
   justify-content: center;
   align-items: center;
+}
+
+.empty-line {
+  font-size: 20px;
+  font-style:italic;
+  margin: 30px;
+  width: 400px;
 }
 
 
