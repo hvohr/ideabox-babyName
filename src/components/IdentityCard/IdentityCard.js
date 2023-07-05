@@ -12,7 +12,6 @@ function IdentityCard(props) {
       <p>Phone Number: {props.phone}</p>
       <p>Email: {props.email}</p>
       <p>Birthplace: {props.birthCity}, {props.birthCountry}</p>
-      <button className='save-button'>Save Identity</button>
     </section>
   )
 }

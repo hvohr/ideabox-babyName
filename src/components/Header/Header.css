@@ -1,8 +1,4 @@
 .navBar {
-  display: flex;
-  align-content: center;
-  align-items: flex-end;
-  justify-content: space-between;
   background-image: url('../images/question-mark-background.jpeg');
   background-size: 100vw;
   background-repeat: no-repeat;
@@ -21,16 +17,4 @@ h1 {
   color: white;
   margin-top: 0px;
   padding: 20px;
-}
-
-.saved-container-button,
-.home-button {
-  width: 200px;;
-  font-size: 20px;
-  background-color:white;
-  border-color: black;
-  border-style:double;
-  padding: 5px;
-  margin: 10px;
-  cursor: pointer;
 }
