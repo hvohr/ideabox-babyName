@@ -2,9 +2,11 @@ import './App.css';
 import React, { useState } from 'react'
 import Header from '../Header/Header'
 import IdentityCard from '../IdentityCard/IdentityCard'
+import SavedIdentities from '../SavedIdentites/SavedIdentities'
 
 function App() {
   const [identity, setIdentity] = useState([])
+  const [savedIdentity, setSavedIdentity] = useState([])
   function getIdentity() {
     fetch(`https://randomuser.me/api/`)
       .then(response => response.json())
@@ -19,10 +21,16 @@ function App() {
     phone={user.phone}
     email={user.email}
     birthday={user.dob.date}
-    key={user.login.md5} />
+    key={user.login.md5}
+    addSavedIdentity={addSavedIdentity} />
   )
   function showHome() {
     setIdentity([])
+  }
+  function addSavedIdentity() {
+    console.log(identity)
+    setSavedIdentity(identity)
+    console.log(savedIdentity)
   }
   return (
     <div className='App'>
