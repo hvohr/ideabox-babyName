@@ -1,7 +1,14 @@
-.navBar {
+header {
   background-image: url('../images/question-mark-background.jpeg');
-  background-size: 100vw;
+  background-size: cover;
   background-repeat: no-repeat;
+}
+
+.nav-section {
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 img {
@@ -16,5 +23,18 @@ h1 {
   font-size: 40px;
   color: white;
   margin-top: 0px;
-  padding: 20px;
+  padding: 10px;
+}
+
+.home-button,
+.saved-container-button {
+  width: 200px;
+  font-size: 20px;
+  background-color:white;
+  border-color: black;
+  border-style:double;
+  padding: 5px;
+  margin: 5px;
+  margin-top: 20px;
+  cursor: pointer;
 }
