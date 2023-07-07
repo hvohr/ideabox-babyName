@@ -10,7 +10,9 @@ function NavBar() {
         </li>
       </div>
       <div className='nav-section'>
-        <button className="saved-container-button">Saved Identities</button>
+        <li className='saved-section-button'>
+          <NavLink to='/savedSection' className='saved-class'>Saved Identities</NavLink>
+        </li>
       </div>
     </nav>
   )
