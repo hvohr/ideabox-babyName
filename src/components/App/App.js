@@ -1,8 +1,13 @@
 import './App.css';
 import React, { useState } from 'react'
-import Header from '../Header/Header'
+import NavBar from '../NavBar/NavBar'
 import IdentityCard from '../IdentityCard/IdentityCard'
 import SavedIdentities from '../SavedIdentites/SavedIdentities'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from '../pages/Home'
+// import SavedSection from '../pages/SavedSection'
+
+
 
 function App() {
   const [identity, setIdentity] = useState([])
@@ -24,26 +29,19 @@ function App() {
     key={user.login.md5}
     addSavedIdentity={addSavedIdentity} />
   )
-  function showHome() {
-    setIdentity([])
-  }
+  
   function addSavedIdentity() {
-    console.log(identity)
     setSavedIdentity(identity)
-    console.log(savedIdentity)
   }
   return (
-    <div className='App'>
-      <Header 
-      showHome = {showHome}
-      />      
-      <main className="main-container">
-        <button className="generate-button" onClick={getIdentity}>Get New Identity</button>
-        {!identity.length && <h2 className="empty-line">In some trouble? Need some new personal information? Click the button above to generate!</h2>}
-        {userData}
-      </main>
-    </div>
-  );
-}
+    <BrowserRouter>
+     <Routes>
+       <Route path='/' element={<Home getIdentity={getIdentity} userData={userData}/>} />
+         <Route path='/home' element={<Home />} />
+        <Route/>
+     </Routes>
+    </BrowserRouter>
+   )
+ }
 
 export default App;
