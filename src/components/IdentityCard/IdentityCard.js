@@ -2,9 +2,6 @@ import React from 'react'
 import "./IdentityCard.css"
 
 function IdentityCard(props) {
-  if (props.length === 0) {
-    return <h2>No new identity yet -- click the button above to generate!</h2>
-  }
   return (
     <section className="card-container">
       <h2>Name: {props.firstName} {props.lastName}</h2>

@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import NavBar from '../NavBar/NavBar'
 import IdentityCard from '../IdentityCard/IdentityCard'
 import SavedIdentities from '../SavedIdentites/SavedIdentities'
@@ -29,20 +29,32 @@ function App() {
     key={user.login.md5}
     addSavedIdentity={addSavedIdentity} />
   )
-  
+
   function addSavedIdentity() {
-    setSavedIdentity(identity)
+    setSavedIdentity([...savedIdentity, identity])
   }
+
+  let filter = savedIdentity.map(prop => <IdentityCard
+    firstName={prop.name.first}
+    lastName={prop.name.last}
+    birthCity={prop.location.city}
+    birthCountry={prop.location.country}
+    phone={prop.phone}
+    email={prop.email}
+    birthday={prop.dob.date}
+    key={prop.login.md5}
+  />
+  )
   return (
     <BrowserRouter>
-     <Routes>
-       <Route path='/' element={<Home getIdentity={getIdentity} userData={userData}/>} />
-         <Route path='/home' element={<Home />} />
-         <Route path='/savedsection' element={<SavedSection />} />
-        <Route/>
-     </Routes>
+      <Routes>
+        <Route path='/' element={<Home getIdentity={getIdentity} userData={userData} />} />
+        <Route path='/home' element={<Home />} />
+        <Route path='/savedsection' element={<SavedSection savedIdentity={filter} />} />
+        <Route />
+      </Routes>
     </BrowserRouter>
-   )
- }
+  )
+}
 
 export default App;

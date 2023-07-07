@@ -1,12 +1,12 @@
 import React from 'react'
-import IdentityCard from '../IdentityCard/IdentityCard'
 import NavBar from '../NavBar/NavBar'
 
 function SavedSection(props) {
+  console.log(props)
   return (
     <div>
     <NavBar />
-    <p>Saved Items</p>
+    {props.savedIdentity}
     </div>
   )
 }
