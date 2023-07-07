@@ -5,7 +5,7 @@ import IdentityCard from '../IdentityCard/IdentityCard'
 import SavedIdentities from '../SavedIdentites/SavedIdentities'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from '../pages/Home'
-// import SavedSection from '../pages/SavedSection'
+import SavedSection from '../pages/SavedSection'
 
 
 
@@ -38,6 +38,7 @@ function App() {
      <Routes>
        <Route path='/' element={<Home getIdentity={getIdentity} userData={userData}/>} />
          <Route path='/home' element={<Home />} />
+         <Route path='/savedsection' element={<SavedSection />} />
         <Route/>
      </Routes>
     </BrowserRouter>
