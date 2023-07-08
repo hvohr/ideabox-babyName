@@ -4,8 +4,10 @@ import NavBar from '../NavBar/NavBar'
 function SavedSection(props) {
   return (
     <div>
-    <NavBar />
-    {props.savedIdentity}
+      <NavBar />
+      <div className='saved-cards'>
+        {props.savedIdentity}
+      </div>
     </div>
   )
 }
