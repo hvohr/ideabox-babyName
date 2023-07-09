@@ -6,7 +6,8 @@ function SavedSection(props) {
     <div>
       <NavBar />
       <div className='saved-cards'>
-        {props.savedIdentity}
+      {!props.savedIdentities.length && <h2 className= 'no-saved-message'>No saved identites yet -- add some !</h2>}
+      {props.savedIdentity}
       </div>
     </div>
   )
