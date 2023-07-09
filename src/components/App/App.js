@@ -31,11 +31,12 @@ function App() {
   function addSavedIdentity() {
     if (!savedIdentity.includes(identity[0])) {
       setSavedIdentity([...savedIdentity, identity[0]])
+      
     }
   }
   function deleteSavedIdentity(id) {
     const filteredSaved = savedIdentity.filter(person => {
-      if (person.login.uuid != id) {
+      if (person.login.uuid !== id) {
         return person
       }
     })
