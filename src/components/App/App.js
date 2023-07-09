@@ -1,13 +1,10 @@
 import './App.css';
-import React, { useState, useEffect } from 'react'
-import NavBar from '../NavBar/NavBar'
+import React, { useState } from 'react'
 import IdentityCard from '../IdentityCard/IdentityCard'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from '../pages/Home'
 import SavedSection from '../pages/SavedSection'
 import SavedIdentities from '../SavedIdentities/SavedIdentities'
-
-
 
 function App() {
   const [identity, setIdentity] = useState([])
@@ -26,34 +23,46 @@ function App() {
     phone={user.phone}
     email={user.email}
     birthday={user.dob.date}
-    key={user.login.md5}
+    key={user.login.uuid}
+    id={user.login.uuid}
     savedIdentity={addSavedIdentity} />
   )
 
   function addSavedIdentity() {
-    setSavedIdentity([...savedIdentity, identity[0]])
+    if (!savedIdentity.includes(identity[0])) {
+      setSavedIdentity([...savedIdentity, identity[0]])
+    }
   }
-  
-let savedPerson = savedIdentity.map(prop => {
-      return ( <SavedIdentities
-        firstName={prop.name.first}
-        lastName={prop.name.last}
-        birthCity={prop.location.city}
-        birthCountry={prop.location.country}
-        phone={prop.phone}
-        email={prop.email}
-        birthday={prop.dob.date}
-        key={prop.login.md5}
-      />
-      )
+  function deleteSavedIdentity(id) {
+    const filteredSaved = savedIdentity.filter(person => {
+      if (person.login.uuid != id) {
+        return person
+      }
     })
+    setSavedIdentity(filteredSaved)
+  }
+
+  let savedPerson = savedIdentity.map(prop => {
+    return (<SavedIdentities
+      firstName={prop.name.first}
+      lastName={prop.name.last}
+      birthCity={prop.location.city}
+      birthCountry={prop.location.country}
+      phone={prop.phone}
+      email={prop.email}
+      birthday={prop.dob.date}
+      key={prop.login.uuid}
+      id={prop.login.uuid}
+      deleteIdentity={deleteSavedIdentity}
+    />
+    )
+  })
   return (
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Home getIdentity={getIdentity} userData={userData} />} />
         <Route path='/home' element={<Home />} />
-        <Route path='/savedsection' element={<SavedSection savedIdentity={savedPerson} />} />
-        <Route />
+        <Route path='/savedsection' element={<SavedSection savedIdentities = {savedIdentity} savedIdentity={savedPerson} />} />
       </Routes>
     </BrowserRouter>
   )
