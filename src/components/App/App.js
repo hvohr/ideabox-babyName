@@ -26,12 +26,22 @@ function App() {
     phone={user.phone}
     email={user.email}
     birthday={user.dob.date}
-    key={user.login.md5}
+    key={user.login.uuid}
+    id={user.login.uuid}
     savedIdentity={addSavedIdentity} />
   )
 
   function addSavedIdentity() {
     setSavedIdentity([...savedIdentity, identity[0]])
+  }
+
+  function deleteSavedIdentity(id) {
+    const filteredSaved = savedIdentity.filter(person => {
+      if (person.login.uuid != id) {
+        return person
+      }
+    })
+    setSavedIdentity(filteredSaved)
   }
   
 let savedPerson = savedIdentity.map(prop => {
@@ -43,7 +53,9 @@ let savedPerson = savedIdentity.map(prop => {
         phone={prop.phone}
         email={prop.email}
         birthday={prop.dob.date}
-        key={prop.login.md5}
+        key={prop.login.uuid}
+        id={prop.login.uuid}
+        deleteIdentity={deleteSavedIdentity}
       />
       )
     })
