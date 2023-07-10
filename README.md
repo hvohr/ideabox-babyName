@@ -1,70 +1,28 @@
-# Getting Started with Create React App
+# Random Identity Generator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Abstract:
+Welcome to the Random Identity Generator! Got into a little trouble lately and need a quick name change? Well, my application is the one for you! We are very secure so no log in needed. You also can see your information on refresh but if you need a quick exit, closing the browser will erase your saved information.You can generate a new identity by clicking on the 'New Identity' button on the home page. This generates some new identity information that you have the option to save. To view your saved identities, click the 'Saved Identities' section to generate the list. If you change your mind about one of them, you have the option to delete. Try and stay out of trouble - but if needed, *Random Identity Generator* is here to help!
 
-## Available Scripts
+### Installation Instructions:
+In order to clone this application:
+1. Start by cloning down the [frontend server repository](https://github.com/hvohr/ideabox-newIdentity).
+2. `cd` (change directory) into that project and run `npm install`
+3. run `npm start` and the website will appear in your preferred browsing site.
+3. You also have the option to click the [deploy link]() for casual viewing.
 
-In the project directory, you can run:
+### Preview of App:
+![Preview](https://user-images.githubusercontent.com/123392693/252508760-f44522e6-cc9b-41d7-919a-38ecff7a780d.jpeg)
+### Context:
+I am currently in Mod 3 of the Turing Frontend Development Program. A total of 15 hours were spent on this project.
+### Developers:
+- Hollis Vohr - [Github](https://github.com/hvohr)
 
-### `npm start`
+### Learning Goals:
+- Utilize foundational React concepts
+- Implement React Router
+- Write DRY, reusable code that follows SRP and trends toward function purity
+- Make network requests to retrieve data from the server and post data from the server. 
+- Maintain proper git workflow and practices.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Tech Stack
+- JavaScript, CSS, HTML, Webpack, React, React Router, FETCH and POST API's.
