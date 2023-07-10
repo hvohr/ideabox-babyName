@@ -102,3 +102,9 @@ nav {
   width: 400px;
   text-align: center;
 }
+
+.delete-button-container {
+  display: flex;
+  margin-top: 50px;
+  justify-content: center;
+}

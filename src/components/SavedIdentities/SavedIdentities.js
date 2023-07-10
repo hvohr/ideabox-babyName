@@ -12,7 +12,9 @@ function SavedIdentities(props) {
       <p>Phone Number: {props.phone}</p>
       <p>Email: {props.email}</p>
       <p>Birthplace: {props.birthCity}, {props.birthCountry}</p>
+      <div className='delete-button-container'>
       <button className='delete-button' onClick={() => deleteSavedIdentity(props.id)}>Delete</button>
+      </div>
     </section>
   )
 }
