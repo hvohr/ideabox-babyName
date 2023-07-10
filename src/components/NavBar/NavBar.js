@@ -6,7 +6,7 @@ function NavBar() {
     <nav className='navBar'>
       <div className='nav-section'>
         <li className='home-button'>
-          <NavLink to='/' className='home-class'>Home</NavLink>
+          <NavLink to='/home' className='home-class'>Home</NavLink>
         </li>
         <li className='saved-section-button'>
           <NavLink to='/savedSection' className='saved-class'>Saved Identities</NavLink>
