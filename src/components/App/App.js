@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import IdentityCard from '../IdentityCard/IdentityCard'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from '../pages/Home'
@@ -8,7 +8,7 @@ import SavedIdentities from '../SavedIdentities/SavedIdentities'
 
 function App() {
   const [identity, setIdentity] = useState([])
-  const [savedIdentity, setSavedIdentity] = useState([])
+  const [savedIdentity, setSavedIdentity] = useState(JSON.parse(sessionStorage.getItem("savedIdentity")) || [])
   function getIdentity() {
     fetch(`https://randomuser.me/api/`)
       .then(response => response.json())
@@ -27,13 +27,15 @@ function App() {
     id={user.login.uuid}
     savedIdentity={addSavedIdentity} />
   )
-
   function addSavedIdentity() {
     if (!savedIdentity.includes(identity[0])) {
       setSavedIdentity([...savedIdentity, identity[0]])
-      
     }
   }
+  useEffect(() => {
+    if (savedIdentity.length > 0) sessionStorage.setItem('savedIdentity', JSON.stringify(savedIdentity))
+    }, [savedIdentity])
+  
   function deleteSavedIdentity(id) {
     const filteredSaved = savedIdentity.filter(person => {
       if (person.login.uuid !== id) {
@@ -42,7 +44,12 @@ function App() {
     })
     setSavedIdentity(filteredSaved)
   }
-
+  // useEffect(() => {
+  //   const items = JSON.parse(localStorage.getItem('savedIdentity'));
+  //   if (items) {
+  //     setSavedIdentity(items);
+  //   }
+  // }, []);
   let savedPerson = savedIdentity.map(prop => {
     return (<SavedIdentities
       firstName={prop.name.first}

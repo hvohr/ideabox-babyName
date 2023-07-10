@@ -20,20 +20,21 @@
 }
 
 .saved-card-container {
-  display: flex;
-  flex-direction: column;
   text-align: center;
-  align-items: center;
+  height: 300px;
+  width: 400px;
+  overflow: hidden;
+  padding: 20px 10px 10px;
+  column-gap: 15px;
+  grid-template-columns: 1fr 2fr max-content max-content;
+  grid-template-rows: repeat(5, minmax(min-content, max-content));
   background-color: white;
-  padding: 10px;
-  width: 25%;
-  height: 25%;
-  margin: 20px;
+  margin: 10px;
 }
 
 .saved-cards {
   display: flex;
-  justify-content:center;
+  justify-content: center;
   flex-wrap: wrap;
   margin-top: 50px;
 }
