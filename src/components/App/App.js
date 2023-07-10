@@ -33,7 +33,7 @@ function App() {
     }
   }
   useEffect(() => {
-    if (savedIdentity.length > 0) sessionStorage.setItem('savedIdentity', JSON.stringify(savedIdentity))
+    if (savedIdentity.length >= 0) sessionStorage.setItem('savedIdentity', JSON.stringify(savedIdentity))
     }, [savedIdentity])
   
   function deleteSavedIdentity(id) {
