@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.dae005ca.css",
-    "main.js": "/static/js/main.afd65cab.js",
-    "static/js/787.53621415.chunk.js": "/static/js/787.53621415.chunk.js",
-    "static/media/dark-texture-watercolor.jpg": "/static/media/dark-texture-watercolor.5094c12f1ec78cdf6035.jpg",
-    "index.html": "/index.html",
-    "main.dae005ca.css.map": "/static/css/main.dae005ca.css.map",
-    "main.afd65cab.js.map": "/static/js/main.afd65cab.js.map",
-    "787.53621415.chunk.js.map": "/static/js/787.53621415.chunk.js.map"
+    "main.css": "/ideabox2-newIdentity/static/css/main.aadc038d.css",
+    "main.js": "/ideabox2-newIdentity/static/js/main.34adab97.js",
+    "static/js/787.53621415.chunk.js": "/ideabox2-newIdentity/static/js/787.53621415.chunk.js",
+    "static/media/dark-texture-watercolor.jpg": "/ideabox2-newIdentity/static/media/dark-texture-watercolor.5094c12f1ec78cdf6035.jpg",
+    "index.html": "/ideabox2-newIdentity/index.html",
+    "main.aadc038d.css.map": "/ideabox2-newIdentity/static/css/main.aadc038d.css.map",
+    "main.34adab97.js.map": "/ideabox2-newIdentity/static/js/main.34adab97.js.map",
+    "787.53621415.chunk.js.map": "/ideabox2-newIdentity/static/js/787.53621415.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.dae005ca.css",
-    "static/js/main.afd65cab.js"
+    "static/css/main.aadc038d.css",
+    "static/js/main.34adab97.js"
   ]
 }
