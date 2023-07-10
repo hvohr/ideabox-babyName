@@ -69,8 +69,9 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Home getIdentity={getIdentity} userData={userData} />} />
-        <Route path='/home' element={<Home />} />
-        <Route path='/savedsection' element={<SavedSection savedIdentities = {savedIdentity} savedIdentity={savedPerson} />} />
+          <Route path='/home' element={<Home />} />
+          <Route path='/savedsection' element={<SavedSection savedIdentities = {savedIdentity} savedIdentity={savedPerson} />} />
+        <Route/>
       </Routes>
     </BrowserRouter>
   )
