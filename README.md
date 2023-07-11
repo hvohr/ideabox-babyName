@@ -8,7 +8,7 @@ In order to clone this application:
 1. Start by cloning down the [frontend server repository](https://github.com/hvohr/ideabox-newIdentity).
 2. `cd` (change directory) into that project and run `npm install`
 3. run `npm start` and the website will appear in your preferred browsing site.
-3. You also have the option to click the [deploy link]() for casual viewing.
+3. You also have the option to click the [deploy link](https://hvohr.github.io/ideabox-newidentity/) for casual viewing.
 
 ### Preview of App:
 ![Preview](https://user-images.githubusercontent.com/123392693/252508760-f44522e6-cc9b-41d7-919a-38ecff7a780d.jpeg)
