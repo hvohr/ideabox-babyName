@@ -1,8 +1,8 @@
 {
-  "name": "react-calculator",
+  "homepage": "https://hvohr.github.io/ideabox-newidentity",
+  "name": "ideabox-newidentity",
   "version": "0.1.0",
-  "private": true,
-  "homepage": "https://hvohr.github.io/home",
+  "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",

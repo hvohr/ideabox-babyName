@@ -44,9 +44,7 @@ function App() {
     })
     setSavedIdentity(filteredSaved)
   }
- function refreshPage() {
-  window.location.reload(false)
- }
+
   let savedPerson = savedIdentity.map(prop => {
     return (<SavedIdentities
       firstName={prop.name.first}
@@ -63,12 +61,12 @@ function App() {
     )
   })
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='/ideabox-newidentity'>
       <Routes>
-        {/* <Route path='/' element={<Home getIdentity={getIdentity} userData={userData}/>} /> */}
-          <Route path='/home' element={<Home getIdentity={getIdentity} refresh = {refreshPage} userData={userData} />} />
+        <Route path='/' element={<Home getIdentity={getIdentity} userData={userData}/>} />
+          <Route path='/home' element={<Home getIdentity={getIdentity} userData={userData} />} />
           <Route path='/savedsection' element={<SavedSection savedIdentities = {savedIdentity} savedIdentity={savedPerson} />} />
-        {/* <Route/> */}
+        <Route/>
       </Routes>
     </BrowserRouter>
   )
