@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/ideabox-newidentity/static/css/main.61ae658d.css",
-    "main.js": "/ideabox-newidentity/static/js/main.cd37ca29.js",
+    "main.js": "/ideabox-newidentity/static/js/main.5f8f0aa9.js",
     "static/js/787.bbc7664e.chunk.js": "/ideabox-newidentity/static/js/787.bbc7664e.chunk.js",
     "static/media/dark-texture-watercolor.jpg": "/ideabox-newidentity/static/media/dark-texture-watercolor.5094c12f1ec78cdf6035.jpg",
     "index.html": "/ideabox-newidentity/index.html",
     "main.61ae658d.css.map": "/ideabox-newidentity/static/css/main.61ae658d.css.map",
-    "main.cd37ca29.js.map": "/ideabox-newidentity/static/js/main.cd37ca29.js.map",
+    "main.5f8f0aa9.js.map": "/ideabox-newidentity/static/js/main.5f8f0aa9.js.map",
     "787.bbc7664e.chunk.js.map": "/ideabox-newidentity/static/js/787.bbc7664e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.61ae658d.css",
-    "static/js/main.cd37ca29.js"
+    "static/js/main.5f8f0aa9.js"
   ]
 }
