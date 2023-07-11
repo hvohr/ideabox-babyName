@@ -62,7 +62,7 @@ function App() {
   })
   return (
     <BrowserRouter>
-      <Routes>
+      <Routes basename='/ideabox-newidentity'>
         <Route path='/' element={<Home getIdentity={getIdentity} userData={userData}/>} />
           <Route path='/home' element={<Home getIdentity={getIdentity} userData={userData} />} />
           <Route path='/savedsection' element={<SavedSection savedIdentities = {savedIdentity} savedIdentity={savedPerson} />} />
